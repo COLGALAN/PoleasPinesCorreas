@@ -76,16 +76,42 @@
                             /*width: 512px;*/
                             height: 80px;
                             /*background: red;*/
-                            /*float: left;*/
+                            float: left;/* Desplazamos el nav hacia la izquierda */
                             text-align: right;
                         }
-                        .menu{
-                            /*background: #2B2B2B;*/
-                            /*background:#d8ba14 ;*/
+                                    .menu2 ul {
+                                        list-style: none;
+                                        overflow: hidden; /* Limpiamos errores de float */
+                                    }
+
+                                    .menu2 ul li {
+                                        float: left;
+                                        font-family: Arial, sans-serif;
+                                        font-size: 16px;
+
+                                    }
+
+                                    .menu2 ul li a {
+                                        display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+                                        /*padding: 20px;*/
+                                        color: #d8ba14;
+                                        text-decoration: none;
+                                        text-align: center;
+                                        padding: 30px 20px;
+                                    }
+
+                                    .menu2 ul li:hover {
+                                        background: white;/*#d8ba14;*/
+                                        color:red;/* #161F28;*/
+                                    }
+
+                        /*.menu{
+                            /*background: #2B2B2B;
+                            /*background:#d8ba14 ;
                             color: #d8ba14;
                             font-size: 19px;
                             display: inline-block;
-                            padding: 30px 20px;
+
                             text-decoration: none;
                             text-align: center;
                         }
@@ -94,7 +120,7 @@
                             color: #161F28;
                             display: inline-block;
                             padding: 30px 20px;
-                        }
+                        }*/
             article{
                 /*width: 1024px;*/
                 height: 580px;
@@ -275,7 +301,8 @@ address{
     background:#d8ba14;
     color: black;
     opacity:80%;
-    /*position:absolute;*/
+    /*position:fixed;
+    z-index: 100;*/
     /*bottom: 0;*/
     /*box-shadow: 0 4px 10px 3px #072545 inset;*/
 }
